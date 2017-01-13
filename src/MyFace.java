@@ -17,7 +17,27 @@ public class MyFace {
         this.hairLength = hairLength;
         this.eyeColor = eyeColor;
         Graphics g = p.getGraphics();
+
+        // draw face and neck
     }
 
-    public void
+    // draw eyes
+    public void eyes(){
+
+    }
+
+    // draw hair
+    public void hair(){
+
+    }
+
+    // draw mouth
+    public void mouth(){
+
+    }
+
+    // draw nose
+    public void nose(){
+
+    }
 }
