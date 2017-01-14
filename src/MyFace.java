@@ -25,6 +25,7 @@ public class MyFace {
 
 
 
+        // check order of all methods before finalized
         hair(g, hairColor, hairLength);
         skin(g, skinColor);
     }
