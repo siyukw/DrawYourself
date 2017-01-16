@@ -60,6 +60,8 @@ public class MyFace {
     public void hair(Graphics g, int hairColor, int hairLength){
         if (hairLength == 2) {
             g.fillOval(175, 100, 500, 440);
+        } else if (hairLength == 3) {
+            g.fillOval();
         }
 
     }
