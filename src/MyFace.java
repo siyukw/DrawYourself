@@ -10,7 +10,9 @@ public class MyFace {
     public MyFace(int gender, int hairLength, int hairColor, int eyeColor, int skinColor){
         DrawingPanel p = new DrawingPanel(800, 950);
         Graphics g = p.getGraphics();
+
         hair(g, hairColor, hairLength);
+
         if (gender == 1) {
             p.setBackground(new Color(100,149,237));
             g.setColor(new Color(0,0,139));
@@ -61,7 +63,23 @@ public class MyFace {
 
     // draw hair
     public void hair(Graphics g, int hairColor, int hairLength){
-        g.setColor(Color.DARK_GRAY);
+        if (hairColor == 1) {
+            g.setColor(new Color(255, 248, 220));
+        } else if (hairColor == 2) {
+            g.setColor(new Color(255, 235, 0));
+        } else if (hairColor == 3) {
+            g.setColor(new Color(210, 165, 32));
+        } else if (hairColor == 4) {
+            g.setColor(new Color(215, 105, 30));
+        } else if (hairColor == 5) {
+            g.setColor(new Color(139, 69, 19));
+        } else if (hairColor == 6) {
+            g.setColor(new Color(95, 50, 10));
+        } else {
+            g.setColor(new Color(0, 0, 0));
+        }
+
+
         if (hairLength == 2) {
             g.fillOval(150, 100, 500, 440);
         } else if (hairLength == 3) {

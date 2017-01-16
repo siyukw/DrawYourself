@@ -11,7 +11,8 @@ public class Client {
         int hairLength = userInput.nextInt();
         System.out.println("On a scale from 1 very pale to 5 very dark, how light is your skin?(integer only)");
         int skinColor = userInput.nextInt();
-        System.out.println("On a scale from 1 blond to 10 black, how dark is your hair?(integer only)");
+        System.out.println("On a scale from 1 blond to 7 black, how dark is your hair?(integer only)");
+        // add more color options later
         int hairColor = userInput.nextInt();
         System.out.println("okay " + name + ", what is your eye color? (1 for blue, 2 for green, 3 for brown, 4 for black)");
         int eyeColor = userInput.nextInt();
