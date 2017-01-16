@@ -10,6 +10,7 @@ public class MyFace {
     public MyFace(int gender, int hairLength, int hairColor, int eyeColor, int skinColor){
         DrawingPanel p = new DrawingPanel(800, 950);
         Graphics g = p.getGraphics();
+        hair(g, hairColor, hairLength);
         if (gender == 1) {
             p.setBackground(new Color(100,149,237));
             g.setColor(new Color(0,0,139));
@@ -26,7 +27,7 @@ public class MyFace {
 
 
         // check order of all methods before finalized
-        hair(g, hairColor, hairLength);
+
         skin(g, skinColor);
     }
 
@@ -46,10 +47,12 @@ public class MyFace {
         }
 
         g.fillRect(370, 500, 60, 275);
-        g.fillOval(175, 120, 500, 550);
+
+        g.fillOval(175, 120, 450, 550);
         g.fillOval(370, 750, 60, 50);
-        g.fillOval(150, 320, 100, 120);
-        g.fillOval(600, 320, 100, 120);
+        // ears
+        g.fillOval(125, 320, 100, 120);
+        g.fillOval(575, 320, 100, 120);
     }
     // draw eyes
     public void eyes(){
@@ -58,11 +61,15 @@ public class MyFace {
 
     // draw hair
     public void hair(Graphics g, int hairColor, int hairLength){
+        g.setColor(Color.DARK_GRAY);
         if (hairLength == 2) {
-            g.fillOval(175, 100, 500, 440);
+            g.fillOval(150, 100, 500, 440);
         } else if (hairLength == 3) {
-            g.fillOval();
+            g.fillOval(130, 100, 540, 700);
+        } else if (hairLength == 4) {
+            g.fillOval(120, 100, 560, 800);
         }
+
 
     }
 
