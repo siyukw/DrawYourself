@@ -16,8 +16,12 @@ public class Client {
         int hairColor = userInput.nextInt();
         System.out.println("okay " + name + ", what is your eye color? (1 for blue, 2 for green, 3 for brown, 4 for black)");
         int eyeColor = userInput.nextInt();
+        System.out.println("Do you have glasses? (1 for yes, 2 for no)");
+        int glasses = userInput.nextInt();
 
-        MyFace mine = new MyFace(gender, hairLength, hairColor, eyeColor, skinColor);
+        MyFace mine = new MyFace(gender, hairLength, hairColor, eyeColor, skinColor, glasses);
 
     }
+
+
 }

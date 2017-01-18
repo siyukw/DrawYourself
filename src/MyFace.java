@@ -7,7 +7,7 @@ public class MyFace {
     private int hairColor;
     private int eyeColor;
 
-    public MyFace(int gender, int hairLength, int hairColor, int eyeColor, int skinColor){
+    public MyFace(int gender, int hairLength, int hairColor, int eyeColor, int skinColor, int glasses){
         DrawingPanel p = new DrawingPanel(800, 950);
         Graphics g = p.getGraphics();
 
@@ -107,5 +107,9 @@ public class MyFace {
 
     }
 
+    // glasses or not
+    public void glasses(Graphics g, int glasses) {
+
+    }
 
 }
