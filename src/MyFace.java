@@ -34,7 +34,7 @@ public class MyFace {
     }
 
     // draw neck and face
-    public void skin(Graphics g, int skinColor){
+    public void skinColor(Graphics g, int skinColor) {
         if(skinColor == 1) {
             g.setColor(new Color(255, 248, 220));
         } else if (skinColor == 2) {
@@ -47,6 +47,9 @@ public class MyFace {
             g.setColor(new Color(90, 0, 0));
 
         }
+    }
+    public void skin(Graphics g, int skinColor){
+        skinColor(g, skinColor);
 
         g.fillRect(370, 500, 60, 275);
 
@@ -55,7 +58,12 @@ public class MyFace {
         // ears
         g.fillOval(125, 320, 100, 120);
         g.fillOval(575, 320, 100, 120);
+
+        // noses
+        skinColor(g, skinColor + 1);
+        g.fillRect(385, 350, 30, 100);
     }
+
     // draw eyes
     public void eyes(){
 
