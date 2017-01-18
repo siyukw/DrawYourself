@@ -31,6 +31,7 @@ public class MyFace {
         // check order of all methods before finalized
 
         skin(g, skinColor);
+        mouth(g);
     }
 
     // draw neck and face
@@ -100,12 +101,11 @@ public class MyFace {
     }
 
     // draw mouth
-    public void mouth(){
+    public void mouth(Graphics g){
+        g.setColor(new Color(225, 80, 80));
+        g.fillArc(375, 550, 50, 30, -30, 210);
 
     }
 
-    // draw nose
-    public void nose(){
 
-    }
 }
