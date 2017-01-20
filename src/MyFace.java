@@ -91,8 +91,8 @@ public class MyFace {
 
     // draw eyes
     public void eyes(Graphics g){
-
-
+        g.fillOval(240, 330, 60, 50);
+        g.fillOval(500, 330, 60, 50);
     }
 
 
