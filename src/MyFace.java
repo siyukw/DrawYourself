@@ -32,7 +32,7 @@ public class MyFace {
         skin(g, skinColor);
         mouth(g);
         eyeBrows(g);
-        eyes(g);
+        eyes(g, eyeColor);
     }
 
     // draw neck and face
@@ -90,9 +90,14 @@ public class MyFace {
     }
 
     // draw eyes
-    public void eyes(Graphics g){
+    public void eyes(Graphics g, int eyeColor){
+        // big ovals
         g.fillOval(240, 330, 60, 50);
         g.fillOval(500, 330, 60, 50);
+        //small ovals
+        g.setColor(Color.WHITE);
+        g.fillOval(265, 350, 10, 10);
+        g.fillOval(525, 350, 10, 10);
     }
 
 
