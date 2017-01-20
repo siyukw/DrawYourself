@@ -27,11 +27,11 @@ public class MyFace {
         this.eyeColor = eyeColor;
 
 
-
         // check order of all methods before finalized
 
         skin(g, skinColor);
         mouth(g);
+        eyeBrows(g);
     }
 
     // draw neck and face
@@ -62,13 +62,37 @@ public class MyFace {
 
         // noses
         skinColor(g, skinColor + 1);
-        g.fillRect(385, 350, 30, 100);
+        g.fillRect(385, 410, 30, 100);
+    }
+
+    // draw eyebrows
+    public void eyeBrows(Graphics g) {
+        if (hairColor == 1) {
+            g.setColor(new Color(255, 248, 220));
+        } else if (hairColor == 2) {
+            g.setColor(new Color(255, 235, 0));
+        } else if (hairColor == 3) {
+            g.setColor(new Color(210, 165, 32));
+        } else if (hairColor == 4) {
+            g.setColor(new Color(215, 105, 30));
+        } else if (hairColor == 5) {
+            g.setColor(new Color(139, 69, 19));
+        } else if (hairColor == 6) {
+            g.setColor(new Color(95, 50, 10));
+        } else {
+            g.setColor(new Color(0, 0, 0));
+        }
+
+        g.drawArc(220, 320, 100, 40, 50, 115);
+        g.drawArc(480, 320, 100, 40, 15, 115);
+
     }
 
     // draw eyes
     public void eyes(){
 
     }
+
 
     // draw hair
     public void hair(Graphics g, int hairColor, int hairLength){
@@ -103,7 +127,7 @@ public class MyFace {
     // draw mouth
     public void mouth(Graphics g){
         g.setColor(new Color(225, 80, 80));
-        g.fillArc(375, 550, 50, 30, -30, 210);
+        g.fillArc(365, 550, 70, 50, 180, 180);
 
     }
 
