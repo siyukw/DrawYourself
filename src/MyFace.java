@@ -91,13 +91,22 @@ public class MyFace {
 
     // draw eyes
     public void eyes(Graphics g, int eyeColor){
+        if (eyeColor == 1) {
+            g.setColor(new Color(51, 153, 255));
+        } else if (eyeColor == 2) {
+            g.setColor(new Color(0, 153, 76));
+        } else if (eyeColor == 3) {
+            g.setColor(new Color(102, 51, 0));
+        } else {
+            g.setColor(Color.BLACK);
+        }
         // big ovals
-        g.fillOval(240, 330, 60, 50);
-        g.fillOval(500, 330, 60, 50);
+        g.fillOval(240, 340, 60, 40);
+        g.fillOval(500, 340, 60, 40);
         //small ovals
         g.setColor(Color.WHITE);
-        g.fillOval(265, 350, 10, 10);
-        g.fillOval(525, 350, 10, 10);
+        g.fillOval(265, 355, 10, 10);
+        g.fillOval(525, 355, 10, 10);
     }
 
 
