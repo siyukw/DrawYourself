@@ -32,6 +32,7 @@ public class MyFace {
         skin(g, skinColor);
         mouth(g);
         eyeBrows(g);
+        eyes(g);
     }
 
     // draw neck and face
@@ -89,7 +90,8 @@ public class MyFace {
     }
 
     // draw eyes
-    public void eyes(){
+    public void eyes(Graphics g){
+
 
     }
 
