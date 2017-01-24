@@ -79,9 +79,9 @@ public class MyFace {
         } else if (hairColor == 3) {
             g.setColor(new Color(210, 165, 32));
         } else if (hairColor == 4) {
-            g.setColor(new Color(215, 105, 30));
+            g.setColor(new Color(215, 110, 30));
         } else if (hairColor == 5) {
-            g.setColor(new Color(139, 69, 19));
+            g.setColor(new Color(130, 60, 10));
         } else if (hairColor == 6) {
             g.setColor(new Color(95, 50, 10));
         } else {
