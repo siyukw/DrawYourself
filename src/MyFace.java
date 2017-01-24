@@ -1,3 +1,7 @@
+// this is a class that implements all the datas that the user inputs
+// and draws their faces on drawingPanel
+
+// add glasses, add bands, adjust eyes and eyebrows
 import java.awt.*;
 import java.util.*;
 
@@ -135,6 +139,7 @@ public class MyFace {
             g.fillOval(130, 100, 540, 700);
         } else if (hairLength == 4) {
             g.fillOval(120, 100, 560, 800);
+            // add more hair for band
         }
 
 
