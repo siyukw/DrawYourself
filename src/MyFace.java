@@ -17,6 +17,7 @@ public class MyFace {
 
         hair(g, hairColor, hairLength);
 
+        // ask for gender to decide background and shirt color
         if (gender == 1) {
             p.setBackground(new Color(100,149,237));
             g.setColor(new Color(0,0,139));
@@ -54,6 +55,7 @@ public class MyFace {
 
         }
     }
+
     public void skin(Graphics g, int skinColor){
         skinColor(g, skinColor);
 
@@ -70,8 +72,7 @@ public class MyFace {
         g.fillRect(385, 410, 30, 100);
     }
 
-    // draw eyebrows
-    public void eyeBrows(Graphics g) {
+    public Color hairColor(Graphics g) {
         if (hairColor == 1) {
             g.setColor(new Color(255, 248, 220));
         } else if (hairColor == 2) {
@@ -87,6 +88,11 @@ public class MyFace {
         } else {
             g.setColor(new Color(0, 0, 0));
         }
+    }
+
+    // draw eyebrows
+    public void eyeBrows(Graphics g) {
+        g.setColor(hairColor(g));
 
         g.drawArc(220, 320, 100, 40, 50, 115);
         g.drawArc(480, 320, 100, 40, 15, 115);
@@ -116,22 +122,7 @@ public class MyFace {
 
     // draw hair
     public void hair(Graphics g, int hairColor, int hairLength){
-        if (hairColor == 1) {
-            g.setColor(new Color(255, 248, 220));
-        } else if (hairColor == 2) {
-            g.setColor(new Color(255, 235, 0));
-        } else if (hairColor == 3) {
-            g.setColor(new Color(210, 165, 32));
-        } else if (hairColor == 4) {
-            g.setColor(new Color(215, 105, 30));
-        } else if (hairColor == 5) {
-            g.setColor(new Color(139, 69, 19));
-        } else if (hairColor == 6) {
-            g.setColor(new Color(95, 50, 10));
-        } else {
-            g.setColor(new Color(0, 0, 0));
-        }
-
+        g.setColor(hairColor(g));
 
         if (hairLength == 2) {
             g.fillOval(150, 100, 500, 440);
