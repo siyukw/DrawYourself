@@ -147,7 +147,11 @@ public class MyFace {
 
     // glasses or not
     public void glasses(Graphics g, int glasses) {
-        if (glasses != 1) {
+        g.setColor(Color.BLACK);
+        if (glasses == 1) {
+            g.drawOval(200, 300, 140, 100);
+            g.drawOval(460, 300, 140, 100);
+            g.drawLine(340, 340, 460, 340);
 
         }
 
