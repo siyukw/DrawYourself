@@ -7,6 +7,7 @@ public class Client {
         String name = userInput.next();
         System.out.println("Hi " + name + ", what's your gender?('1' for male; '2' for female)");
         int gender = userInput.nextInt();
+
         System.out.println("On a scale from 1 bald to 4 very long, how long is your hair?(integer only)");
         int hairLength = userInput.nextInt();
         System.out.println("On a scale from 1 very pale to 5 very dark, how light is your skin?(integer only)");

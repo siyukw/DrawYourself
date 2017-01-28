@@ -35,6 +35,7 @@ public class MyFace {
         // check order of all methods before finalized
 
         skin(g, skinColor);
+        glasses(g, glasses);
         mouth(g);
         eyeBrows(g);
         eyes(g, eyeColor);
@@ -72,7 +73,7 @@ public class MyFace {
         g.fillRect(385, 410, 30, 100);
     }
 
-    public Color hairColor(Graphics g) {
+    public void hairColor(Graphics g) {
         if (hairColor == 1) {
             g.setColor(new Color(255, 248, 220));
         } else if (hairColor == 2) {
@@ -88,11 +89,12 @@ public class MyFace {
         } else {
             g.setColor(new Color(0, 0, 0));
         }
+
     }
 
     // draw eyebrows
     public void eyeBrows(Graphics g) {
-        g.setColor(hairColor(g));
+        hairColor(g);
 
         g.drawArc(220, 320, 100, 40, 50, 115);
         g.drawArc(480, 320, 100, 40, 15, 115);
@@ -122,7 +124,7 @@ public class MyFace {
 
     // draw hair
     public void hair(Graphics g, int hairColor, int hairLength){
-        g.setColor(hairColor(g));
+        hairColor(g);
 
         if (hairLength == 2) {
             g.fillOval(150, 100, 500, 440);
@@ -145,6 +147,9 @@ public class MyFace {
 
     // glasses or not
     public void glasses(Graphics g, int glasses) {
+        if (glasses != 1) {
+
+        }
 
     }
 
